@@ -9,6 +9,8 @@ RUN ln -sf /dev/stdout /var/log/squid/cache.log
 COPY squid.conf /etc/squid/squid.conf
 COPY run.sh /run.sh
 
+RUN chmod +x /run.sh
+
 EXPOSE 3128
 
 CMD ["/run.sh"]
