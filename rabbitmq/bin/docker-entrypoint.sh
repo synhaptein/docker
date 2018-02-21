@@ -44,6 +44,7 @@ rabbitConfigKeys=(
   default_user
   default_vhost
   hipe_compile
+  cluster_partition_handling
 )
 fileConfigKeys=(
   management_ssl_cacertfile
@@ -189,7 +190,7 @@ rabbit_env_config() {
 
     local rawVal=
     case "$conf" in
-      verify|fail_if_no_peer_cert)
+      verify|fail_if_no_peer_cert|cluster_partition_handling)
         [ "$val" ] || continue
         rawVal="$val"
         ;;
