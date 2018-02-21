@@ -65,6 +65,8 @@ declare -A configDefaults=(
 
   [ssl_fail_if_no_peer_cert]='true'
   [ssl_verify]='verify_peer'
+
+  [cluster_partition_handling]='ignore'
 )
 
 haveConfig=
